@@ -16,7 +16,7 @@ const app = Vue.createApp({
         },
         operate(){
             try {
-                this.operation=eval(this.operation.replace('x','*')).toFixed(6); 
+                this.operation=parseInt(eval(this.operation.replace('x','*')).toFixed(6)); 
             } catch (error) {
                 this.operation='Error';
             }
