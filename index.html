@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Metadata para PWA-->
+    <meta name="theme-color" content="#41b883">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <!--Modificar barra de estado IOS-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+
+    <title>Calculadora VUE</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!--Iconos-->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="./img/favicon.png">
+    <link rel="apple-touch-startup-image" href="./img/favicon.png">
+    <!--Manifest-->
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <h3>{{operation}}</h3>
+        <div class="buttonContainer">
+            <div class="buttonGrid">
+                <button v-on:click="setCharacter('7')">7</button>
+                <button v-on:click="setCharacter('8')">8</button>
+                <button v-on:click="setCharacter('9')">9</button>
+                <button v-on:click="setCharacter('4')">4</button>
+                <button v-on:click="setCharacter('5')">5</button>
+                <button v-on:click="setCharacter('6')">6</button>
+                <button v-on:click="setCharacter('1')">1</button>
+                <button v-on:click="setCharacter('2')">2</button>
+                <button v-on:click="setCharacter('3')">3</button>
+                <button v-on:click="setCharacter('0')">0</button>
+                <button v-on:click="setCharacter('/')">/</button>
+                <button v-on:click="setCharacter('x')">x</button>
+                <button v-on:click="setCharacter('-')">-</button>
+                <button v-on:click="setCharacter('+')">+</button>
+                <button v-on:click="operate">=</button>
+                <button v-on:click="restart">Del</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./load.js"></script>
+    <script src="./js/vue.global.prod.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+</body>
+
+</html>
