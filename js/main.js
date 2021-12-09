@@ -16,11 +16,12 @@ const app = Vue.createApp({
         },
         operate(){
             try {
-                this.operation=parseInt(eval(this.operation.replace('x','*')).toFixed(6)); 
+                this.operation=eval(this.operation.replace('x','*')); 
+                if(!(Number.isInteger(this.operation))) this.operation=(this.operation.toFixed(2)).toString();
             } catch (error) {
                 this.operation='Error';
             }
             if(this.operation === undefined) this.operation='Error';
-        }
+        },
     },
 });
