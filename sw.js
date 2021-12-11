@@ -1,4 +1,5 @@
-const CACHE_NAME = "v1_cache_contador_vue";
+const version = "11.12.21-1";
+const CACHE_NAME = "calculatorCache";
 const urlsToCache = [
     "./",
     "./img/favicon.png",

@@ -28,7 +28,7 @@
 <body>
     <div id="app">
         <h1>{{title}}</h1>
-        <h3>{{operation}}</h3>
+        <h3>{{value}}</h3>
         <div class="buttonContainer">
             <div class="buttonGrid">
                 <button v-on:click="setCharacter('7')">7</button>
@@ -41,12 +41,16 @@
                 <button v-on:click="setCharacter('2')">2</button>
                 <button v-on:click="setCharacter('3')">3</button>
                 <button v-on:click="setCharacter('0')">0</button>
-                <button v-on:click="setCharacter('/')">/</button>
-                <button v-on:click="setCharacter('x')">x</button>
-                <button v-on:click="setCharacter('-')">-</button>
-                <button v-on:click="setCharacter('+')">+</button>
-                <button v-on:click="operate">=</button>
-                <button v-on:click="restart">Del</button>
+                <button v-on:click="setCharacter('.')">,</button>
+                <button v-on:click="setCharacter('x')">&times;</button>
+                <button v-on:click="setCharacter('-')">&minus;</button>
+                <button v-on:click="setCharacter('+')">&plus;</button>
+                <button v-on:click="operate">&equals;</button>
+                <button v-on:click="del">DEL</button>
+                <button v-on:click="restart">C</button>
+                <button v-on:click="pow">&times;<sup>2</sup></button>
+                <button v-on:click="sqrt">√x</button>
+                <button v-on:click="setCharacter('/')">&divide;</button>
             </div>
         </div>
     </div>
