@@ -53,4 +53,5 @@ self.addEventListener('fetch', e => {
             }
         )
     )
+    location.reload;
 });
