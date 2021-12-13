@@ -8,7 +8,7 @@
     "scoup": "./",
     "lang": "es-ES",
     "display": "standalone",
-    "orientation": "any",
+    "orientation": "portrait",
     "icons": [{
             "src": "./img/favicon.png",
             "sizes": "16x16",
