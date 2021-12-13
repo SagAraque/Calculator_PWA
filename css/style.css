@@ -9,109 +9,77 @@ html,
 body {
     height: 100%;
 }
-html{
-    font-size: 22px;
-}
 
 button,
 h1,
-h3,
-li {
+h3 {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-h1,h3,.displayContainer{
+h1,h3{
+    width: 295px;
     text-align: center;
-    box-sizing: border-box;
-    width: calc(100% - 0.625rem);
 }
 h3 {
-    text-align: right;
-    width: 100%;
+    
     font-size: 1.8rem;
-    margin: 0rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-#cleanIcon{
-    cursor: pointer;
-}
-#history{
-    height: 10rem;
-    padding: 0rem;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
-#history li{
-    text-align: right;
-    font-size: 1rem;
-    color: #ffffff36;
+    margin: 10px 0px;
+    
+    border: 2px solid #41b883;
+    border-radius: 5px;
 }
 
-.displayContainer{
-    padding: 0.313rem;
-    margin: 0.625rem 0;
-    border: 0.125rem solid #41b883;
-    border-radius: 0.313rem;
-}
 h1 {
-    font-size: 2rem;
     position: relative;
 }
 
 h1::after, h1::before {
     content: "";
     width: 100%;
-    height: 0.188rem;
-    bottom: -0.938rem;
-    left: 0.063rem;
+    height: 3px;
+    bottom: -15px;
+    left: 1px;
     background-color: #41b883;
     position: absolute;
 }
 h1::before{
-    top: -0.938rem;
+    top: -15px;
 }
 
 #app {
-    width: 20rem;
+    width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.625rem;
-    box-sizing: border-box;
+    padding: 10px;
 }
 
 button {
-    width: calc(100% - 0.625rem);
-    margin: 0.313rem 0rem;
-    padding: 0.625rem 0.313rem;
+    width: 60px;
+    margin: 5px 10px;
+    padding: 10px 5px;
     color: #23303d;
-    font:900 1rem monospace;
+    font:900 16px monospace;
     border: none;
     background-color: #41b883;
-    border-radius: 0.125rem;
+    border-radius: 2px;
     cursor: pointer;
-    justify-self: center;
+    flex: 1 1 auto;
 }
 
 .buttonContainer {
-    width: 100%;
+    width: 200px;
     display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .buttonGrid {
-    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0rem;
-    grid-row-gap: 0rem;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 .buttonGrid button:nth-of-type(1) { grid-area: 2 / 1 / 3 / 2; }
 .buttonGrid button:nth-of-type(2) { grid-area: 2 / 2 / 3 / 3; }
@@ -136,43 +104,4 @@ button {
 
 button:hover {
     background-color: #3dad7b;
-}
-
-
-/*Responsive*/
-@media (max-width: 360px){
-    html{
-        font-size: 17px;
-    }
-}
-@media (max-width: 280px){
-    h1{
-        font-size: 1.5rem;
-    }
-}
-@media (min-width: 361px) and (max-width: 430px){
-    html{
-        font-size: 18px;
-    }
-}
-
-
-@media (max-width: 600px){
-    body {
-        display: initial;
-    }
-    #app{
-        width: 100%;
-    }
-}
-
-@media (max-height:600px){
-    h1{
-        display: none;
-    }
-}
-@media (min-height:601px) and (max-height: 700px){
-    h1{
-        font-size: 1.65rem;
-    }
 }

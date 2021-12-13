@@ -4,9 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="expires" content="0">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Pragma" CONTENT="no-cache">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Metadata para PWA-->
     <meta name="theme-color" content="#41b883">
@@ -31,12 +28,7 @@
 <body>
     <div id="app">
         <h1>{{title}}</h1>
-        <div class="displayContainer">
-            <ul id="history">
-                <li v-for="(item, index) in history" v-on:click="getHistory(index)">{{item}}</li>
-            </ul>
-            <h3 id="value"> <img id="cleanIcon" src="./img/clean.png" alt="" v-on:click="cleanHistory">{{value}}</h3>
-        </div>
+        <h3>{{value}}</h3>
         <div class="buttonContainer">
             <div class="buttonGrid">
                 <button v-on:click="setCharacter('7')">7</button>
